@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
 import { FaSearch } from 'react-icons/fa';
-import { useAuthState, userAuthDispatch } from '../context/auth'
+import { useAuthState, useAuthDispatch } from '../context/auth'
 
 const NavBar: React.FC = () => {
     const {loading, authenticated} = useAuthState();
 
-    const dispatch = userAuthDispatch();
+    const dispatch = useAuthDispatch();
 
     const handleLogout = () => {
         axios.post("/auth/logout")

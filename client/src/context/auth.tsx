@@ -106,5 +106,5 @@ export const AuthProvider = ({children}:{/*type*/children: React.ReactNode}) => 
  */
 
 export const useAuthState = () => useContext(StateContext);
-export const userAuthDispatch = () => useContext(DispatchContext);
+export const useAuthDispatch = () => useContext(DispatchContext);
 

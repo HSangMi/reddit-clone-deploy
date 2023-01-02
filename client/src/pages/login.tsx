@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { FormEvent, useState } from "react";
 import InputGroup from "../components/InputGroup";
-import { useAuthState, userAuthDispatch } from "../context/auth";
+import { useAuthState, useAuthDispatch } from "../context/auth";
 
 const Login = () =>{
     let router = useRouter();
@@ -12,7 +12,7 @@ const Login = () =>{
     const[password, setPassword] = useState("");
     const[errors, setErrors] = useState<any>({});
     const { authenticated } = useAuthState();
-    const dispatch = userAuthDispatch();
+    const dispatch = useAuthDispatch();
 
     if(authenticated) router.push("/");
 
