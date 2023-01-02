@@ -18,7 +18,7 @@ const app = express(); // express() : express 모둘을 사용할 떄 최상위 
 const origin = process.env.ORIGIN;
 app.use(
     cors({
-        origin,
+        origin: process.env.ORIGIN,
         credentials: true
     })
 )
